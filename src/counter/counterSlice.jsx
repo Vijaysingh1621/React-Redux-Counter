@@ -26,10 +26,13 @@ export const counterSlice = createSlice({
     divide:(state)=>{
         state.value/=2
     },
+    clear:(state)=>{
+      state.value=0;
+    }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount,multiply,divide } = counterSlice.actions
+export const { increment, decrement, incrementByAmount,multiply,divide,clear } = counterSlice.actions
 
 export default counterSlice.reducer

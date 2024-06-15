@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { useSelector,useDispatch } from 'react-redux'
-import { increment,decrement,incrementByAmount,multiply,divide} from './counter/counterSlice'
+import { increment,decrement,incrementByAmount,multiply,divide,clear} from './counter/counterSlice'
 
 function App() {
   const [incrementAmount, setIncrementAmount] = useState('2');
@@ -35,6 +35,9 @@ function App() {
         Increment by amount
       </button>
       </div>
+      <button onClick={() => dispatch(clear())}>
+          Clear
+        </button>
         
       </div>
       
